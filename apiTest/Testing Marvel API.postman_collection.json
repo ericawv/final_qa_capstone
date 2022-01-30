@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "419f588c-05c7-41e5-905c-c368d91913d6",
+		"name": "Testing Marvel API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Comics",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"To be Ok\", function(){",
+							"    pm.response.to.be.ok",
+							"})",
+							"",
+							"pm.test(\"To Have Status 200\", function(){",
+							"    pm.response.to.have.status(200)",
+							"})",
+							"",
+							"pm.test(\"Expect Response status to be equal\", function(){",
+							"    pm.expect(pm.response.code).to.be.equal(200)",
+							"})",
+							"",
+							"pm.test(\"Expect Response reason to be OK\", function(){",
+							"    pm.expect(pm.response.reason()).to.be.equal(\"OK\")",
+							"})",
+							"",
+							"pm.test(\"Expect Response Time to be less than 2000\", function(){",
+							"    pm.expect(pm.response.responseTime).to.be.lessThan(1500)",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://gateway.marvel.com/v1/public/comics?ts={{ts}}&apikey={{apikey}}&hash={{hash}}",
+					"protocol": "http",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"comics"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "apikey",
+							"value": "{{apikey}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{hash}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comic by id - Not Found",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Expect Response status to be equal\", function(){",
+							"    pm.expect(pm.response.code).to.be.equal(404)",
+							"})",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.marvel.com/v1/public/comics/1?ts={{ts}}&apikey={{apikey}}&hash={{hash}}",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"comics",
+						"1"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "apikey",
+							"value": "{{apikey}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{hash}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comic by id - Existing Comic",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Expect Response status to be equal\", function(){",
+							"    pm.response.to.be.ok",
+							"})",
+							"",
+							"pm.test(\"Must be Spiderman: Ultimate Spider-Man\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Ultimate Spider-Man\");",
+							"});",
+							"",
+							"pm.test(\"Size of the Resource must be 1\", function () {",
+							"    pm.expect(pm.response.json().data.results.length).to.be.equal(1)",
+							"});",
+							"",
+							"pm.test(\"Size of the Resource\", function () {",
+							"    pm.expect(pm.response.json().data.results.length).to.be.equal(1)",
+							"});",
+							"",
+							"pm.test(\"Series must be Ultimate Spider-Man (Spanish Language Edition) (2000 - 2001)\", function () {",
+							"    var series_name = pm.response.json().data.results[0].series.name;",
+							"    pm.expect(series_name).to.be.equal(\"Ultimate Spider-Man (Spanish Language Edition) (2000 - 2001)\")",
+							"});",
+							"",
+							"",
+							"console.log(pm.response.json().data.results[0].series.name)"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.marvel.com/v1/public/comics/21467?ts={{ts}}&apikey={{apikey}}&hash={{hash}}",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"comics",
+						"21467"
+					],
+					"query": [
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "apikey",
+							"value": "{{apikey}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{hash}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Characters - Offset Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Test limit Parameter\", function(){",
+							"    pm.expect(pm.response.json().data.results.length).to.be.equal(80)",
+							"});",
+							"",
+							"pm.test(\"Test Lenght use the Count Parameter\", function(){",
+							"    pm.expect(pm.response.json().data.count).to.be.equal(80)",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.marvel.com/v1/public/characters?limit=80&offset=200&ts={{ts}}&apikey={{apikey}}&hash={{hash}}",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"marvel",
+						"com"
+					],
+					"path": [
+						"v1",
+						"public",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "80"
+						},
+						{
+							"key": "offset",
+							"value": "200"
+						},
+						{
+							"key": "ts",
+							"value": "{{ts}}"
+						},
+						{
+							"key": "apikey",
+							"value": "{{apikey}}"
+						},
+						{
+							"key": "hash",
+							"value": "{{hash}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var pubkey = \"<INSERT YOUR PUBLIC KEY>\";",
+					"var pvtkey = \"<INSERT YOUR PRIVATE KEY>\";",
+					"var ts = new Date().getTime();",
+					"",
+					"pm.environment.set(\"ts\", ts)",
+					"pm.environment.set(\"apikey\", pubkey)",
+					"",
+					"var message = ts+pvtkey+pubkey;",
+					"var a = CryptoJS.MD5(message);",
+					"pm.environment.set(\"hash\", a.toString())"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

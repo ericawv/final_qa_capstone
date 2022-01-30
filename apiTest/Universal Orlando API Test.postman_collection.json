@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "1703d09e-f9ef-41c2-826c-b8f0a4c43445",
+		"name": "Universal Orlando API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Request Method",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://siteintercept.qualtrics.com/WRSiteInterceptEngine/Targeting.php?Q_ZoneID=ZN_0kzhYVZAT2rdyZv&Q_CLIENTVERSION=1.65.0&Q_CLIENTTYPE=web",
+					"protocol": "https",
+					"host": [
+						"siteintercept",
+						"qualtrics",
+						"com"
+					],
+					"path": [
+						"WRSiteInterceptEngine",
+						"Targeting.php"
+					],
+					"query": [
+						{
+							"key": "Q_ZoneID",
+							"value": "ZN_0kzhYVZAT2rdyZv"
+						},
+						{
+							"key": "Q_CLIENTVERSION",
+							"value": "1.65.0"
+						},
+						{
+							"key": "Q_CLIENTTYPE",
+							"value": "web"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request Method",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

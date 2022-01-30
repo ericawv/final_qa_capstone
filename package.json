@@ -1,0 +1,20 @@
+{
+  "name": "hyundai_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "chromedriver": "^97.0.0",
+    "selenium-webdriver": "^4.1.1"
+  }
+}
