@@ -33,7 +33,7 @@ https://trello.com/b/wnP1VJm2/universal-orlando-test-plan-capstone
 👤 **Erica Vaught**
 
 * Github: [@ericawv](https://github.com/ericawv)
-* LinkedIn: [@ericavaught](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/ericavaught\/)
+* LinkedIn: [@ericavaught](https:/www.linkedin.com/in/ericavaught/)
 
 ## Show your support
 
