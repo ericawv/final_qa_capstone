@@ -6,28 +6,34 @@
   </a>
 </p>
 
-> This projoect hightlight the testing techniques and process for testing both the Hyundai USA and Universal Orlando Resort USA websites.
 
-### 🏠 [Homepage](Homepage of the test plans are: https://trello.com/b/ovLKqAcc/hyundai-test-plan-capstone and https://trello.com/b/wnP1VJm2/universal-orlando-test-plan-capstone)
+Hi! Thank you for visiting the demonstraion of my Bright Paths QA Specializations Capstone Project. This project hightlights the manual and automated testing techniques and process for testing both the Hyundai USA and Universal Orlando Resort USA websites. 
+> 
 
-## Install
+### 🏠 [Test Website For Hyundai USA](https://www.hyundaiusa.com/us/en)
+### 🏠 [Test Website For Universal Orlando Resort](https://www.universalorlando.com/web/en/us)
 
-```sh
-npm install
-```
 
-## Run tests
+## Hyundai USA Test Plan, Test Cases, and Reports
 
 ```sh
-npm run test
+https://trello.com/b/ovLKqAcc/hyundai-test-plan-capstone
 ```
+
+## Universal Orlando Report Test Plan, Test Cases, and Reports
+
+```sh
+https://trello.com/b/wnP1VJm2/universal-orlando-test-plan-capstone
+```
+
+## Screenshots
 
 ## Author
 
 👤 **Erica Vaught**
 
 * Github: [@ericawv](https://github.com/ericawv)
-* LinkedIn: [@https:\/\/www.linkedin.com\/in\/ericavaught\/](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/ericavaught\/)
+* LinkedIn: [@ericavaught](https:/www.linkedin.com/in/ericavaught/)
 
 ## Show your support
 
