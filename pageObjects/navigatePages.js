@@ -11,14 +11,14 @@ module.exports = class Navigate {
     constructor(myDriver, myUrl, myTickets, myPasses, myDeals, myHotels, myAnnualPasses, myVacationPackages, mySafetyGuidelines) {
         this.driver = myDriver
         this.url = myUrl
-        this.tickets = myTickets
-        this.passes = myPasses
-        this.deals = myDeals
+        // this.tickets = myTickets
+        // this.passes = myPasses
+        // this.deals = myDeals
         
-        this.hotels = myHotels
-        this.annualPasses = myAnnualPasses
-        this.vacationPackages = myVacationPackages
-        this.safetyGuidelines = mySafetyGuidelines
+        // this.hotels = myHotels
+        // this.annualPasses = myAnnualPasses
+        // this.vacationPackages = myVacationPackages
+        // this.safetyGuidelines = mySafetyGuidelines
     }
 
     /* Selectors */
@@ -32,13 +32,13 @@ module.exports = class Navigate {
     dealsSpecials = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[3]/tcm-anchor/a/span/div')
 
    
-    // hotels = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[4]/tcm-anchor/a/span/div')
-    
-    // annualPasses = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[5]/tcm-anchor/a/span/div')
+    hotels = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[4]/tcm-anchor/a/span/div')
 
-    // vacationPackages = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[6]/tcm-anchor/a/span/div')
+    annualPasses = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[5]/tcm-anchor/a/span/div')
 
-    // safetyGuidelines = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[7]/tcm-anchor/a/span/div')
+    vacationPackages = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[6]/tcm-anchor/a/span/div')
+
+    safetyGuidelines = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[7]/tcm-anchor/a/span/div')
 
     /* Methods */
 
@@ -72,37 +72,37 @@ module.exports = class Navigate {
         return (await this.driver.findElement(this.dealsSpecials)).click()
     }
 
-    // async getHotels(myHotels) {
-    //     return(await this.driver.findElement(this.hotels)).getText();
-    // }
+    async getHotels(myHotels) {
+        return(await this.driver.findElement(this.hotels)).getText();
+    }
 
-    // async clickHotels(myHotels) {
-    //     return (await this.driver.findElement(this.hotels)).click()
-    // }
+    async clickHotels(myHotels) {
+        return (await this.driver.findElement(this.hotels)).click()
+    }
 
-    // async getAnnual(myAnnualPasses) {
-    //     return(await this.driver.findElement(this.annualPasses)).getText();
-    // }
+    async getAnnual(myAnnualPasses) {
+        return(await this.driver.findElement(this.annualPasses)).getText();
+    }
 
-    // async clickAnnual(myAnnualPasses) {
-    //     return (await this.driver.findElement(this.annualPasses)).click()
-    // }
+    async clickAnnual(myAnnualPasses) {
+        return (await this.driver.findElement(this.annualPasses)).click()
+    }
 
-    // async getPackages(myVacationPackages) {
-    //     return(await this.driver.findElement(this.vacationPackages)).getText();
-    // }
+    async getPackages(myVacationPackages) {
+        return(await this.driver.findElement(this.vacationPackages)).getText();
+    }
 
-    // async clickPackages(myVacationPackages) {
-    //     return (await this.driver.findElement(this.vacationPackages)).click()
-    // }
+    async clickPackages(myVacationPackages) {
+        return (await this.driver.findElement(this.vacationPackages)).click()
+    }
 
-    // async getSafety(mySafetyGuidelines) {
-    //     return(await this.driver.findElement(this.safetyGuidelines)).getText();
-    // }
+    async getSafety(mySafetyGuidelines) {
+        return(await this.driver.findElement(this.safetyGuidelines)).getText();
+    }
 
-    // async clickSafety(mySafetyGuidelines) {
-    //     return (await this.driver.findElement(this.safetyGuidelines)).click()
-    // }
+    async clickSafety(mySafetyGuidelines) {
+        return (await this.driver.findElement(this.safetyGuidelines)).click()
+    }
    
 }
 

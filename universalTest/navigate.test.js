@@ -67,44 +67,44 @@ test('Navigate Deals & Specials', async () => {
 })
 
 // Accessess the Hotels page with async to use await, by locating the Parks Tickets link and click on the link. 
-// test('Navigate Hotels', async () => {
+test('Navigate Hotels', async () => {
     
-//     await navigate.getHotels('Hotels')
+    await navigate.getHotels('Hotels')
 
-//     await navigate.clickHotels('Hotels')
+    await navigate.clickHotels('Hotels')
 
-//     await driver.sleep(5000)
-// })
+    await driver.sleep(5000)
+})
 
 // Accessess the Annual Passes page with async to use await, by locating the Parks Tickets link and click on the link. 
-// test('Navigate Annual Passes', async () => {
+test('Navigate Annual Passes', async () => {
     
-//     await navigate.getAnnual('Annual Passes')
+    await navigate.getAnnual('Annual Passes')
 
-//     await navigate.clickAnnual('Annual Passes')
+    await navigate.clickAnnual('Annual Passes')
 
-//     await driver.sleep(5000)
-// })
+    await driver.sleep(5000)
+})
 
 // Accessess the Vacation Packages page with async to use await, by locating the Parks Tickets link and click on the link. 
-// test('Navigate Vacation Packages', async () => {
+test('Navigate Vacation Packages', async () => {
     
-//     await navigate.getPackages('Vacation Packages')
+    await navigate.getPackages('Vacation Packages')
 
-//     await navigate.clickPackages('Vacation Packages')
+    await navigate.clickPackages('Vacation Packages')
 
-//     await driver.sleep(5000)
-// })
+    await driver.sleep(5000)
+})
 
 // Accessess the Safety Guidelines page with async to use await, by locating the Parks Tickets link and click on the link. 
-// test('Navigate Safety Guidelines', async () => {
+test('Navigate Safety Guidelines', async () => {
     
-//     await navigate.getSafety('Safety Guidelines')
+    await navigate.getSafety('Safety Guidelines')
 
-//     await navigate.clickSafety('Safety Guidelines')
+    await navigate.clickSafety('Safety Guidelines')
 
-//     await driver.sleep(5000)
-// })
+    await driver.sleep(5000)
+})
 
 
 

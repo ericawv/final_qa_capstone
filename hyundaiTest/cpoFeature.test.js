@@ -36,7 +36,9 @@ test('Certified Pre-Owned Link Test', async () => {
 //Locate the zip code on the left side of the screen    
     let location = await driver.findElement(By.xpath('//*[@id="global-site-header"]/div/div[1]/div/div[1]/p/button[1]/span'))
 
-//Get the zip code text    
+    await driver.sleep(5000)
+
+    //Get the zip code text    
     let zipCode = await location.getText()
 
 //Check the zip code assertion    
