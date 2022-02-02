@@ -18,11 +18,11 @@ jest.setTimeout(30000)
 //This test ensures that the user lands on te Certified Pre-Owned page based on location 
 test('Certified Pre-Owned Link Test', async () => {
 
+//Opens browser window in maximize mode
+    await driver.manage().window().maximize() 
+
 //Opens the Hyundai USA website
     await driver.get('https://www.hyundaiusa.com/us/en') 
-
-//Opens browser window in maximize mode
-   await driver.manage().window().maximize() 
 
 //Accepts the cookies policy 
     await driver.findElement(By.xpath('/html/body/div[1]/div/button')).click()
@@ -32,6 +32,8 @@ test('Certified Pre-Owned Link Test', async () => {
 
 //Locate and click on the Search CPO inventory button    
     await driver.findElement(By.xpath('//*[@id="main"]/div[6]/div/div[2]/div/div/a')).click()
+
+    await driver.sleep(5000)
 
 //Locate the zip code on the left side of the screen    
     let location = await driver.findElement(By.xpath('//*[@id="global-site-header"]/div/div[1]/div/div[1]/p/button[1]/span'))

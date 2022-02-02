@@ -11,14 +11,6 @@ module.exports = class Navigate {
     constructor(myDriver, myUrl, myTickets, myPasses, myDeals, myHotels, myAnnualPasses, myVacationPackages, mySafetyGuidelines) {
         this.driver = myDriver
         this.url = myUrl
-        // this.tickets = myTickets
-        // this.passes = myPasses
-        // this.deals = myDeals
-        
-        // this.hotels = myHotels
-        // this.annualPasses = myAnnualPasses
-        // this.vacationPackages = myVacationPackages
-        // this.safetyGuidelines = mySafetyGuidelines
     }
 
     /* Selectors */
@@ -31,7 +23,6 @@ module.exports = class Navigate {
     
     dealsSpecials = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[3]/tcm-anchor/a/span/div')
 
-   
     hotels = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[4]/tcm-anchor/a/span/div')
 
     annualPasses = By.xpath('//*[@id="page-main-content"]/upr-quick-links[1]/section/div[2]/div[5]/tcm-anchor/a/span/div')

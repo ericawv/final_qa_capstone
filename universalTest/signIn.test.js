@@ -18,11 +18,11 @@ jest.setTimeout(80000)
 //Universal Orlando Sign In with async to use await. Wait until element is located. 
 test('Universal Sign In Test', async () => {
 
+//Opens browser window in maximize mode
+    await driver.manage().window().maximize()     
+
 //Driver.get will navigate to a website.
     await driver.get('https://www.universalorlando.com/web/en/us')
-
-//Opens browser window in maximize mode
-    await driver.manage().window().maximize() 
 
 //Locate and click on banner button to remove message from the top of the home page 
     await driver.findElement(By.xpath('/html/body/app-component/header/div/div[1]/div/div/button')).click()

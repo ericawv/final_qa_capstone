@@ -17,11 +17,11 @@ jest.setTimeout(80000)
 
 test('Universal Menu Test', async () => {
 
-//Driver.get will navigate to a website.
-        await driver.get('https://www.universalorlando.com/web/en/us')
-    
 //Opens browser window in maximize mode
         await driver.manage().window().maximize() 
+
+//Driver.get will navigate to a website.
+        await driver.get('https://www.universalorlando.com/web/en/us')
 
 //Wait for page to load   
         await driver.sleep(5000)

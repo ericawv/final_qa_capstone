@@ -18,11 +18,11 @@ jest.setTimeout(80000)
 //Test Hyundaia USA search with async to use await. Wait until element is located. 
 test('Search Feature Test', async () => {
 
+//Opens browser window in maximize mode
+    await driver.manage().window().maximize()       
+
 //Driver (using .get) will navigate to a website.
     await driver.get('https://www.hyundaiusa.com/us/en')
-
-//Opens browser window in maximize mode
-    await driver.manage().window().maximize()   
 
 //Accepts the cookies policy 
     await driver.findElement(By.xpath('/html/body/div[1]/div/button')).click()

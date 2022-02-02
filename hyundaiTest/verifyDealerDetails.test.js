@@ -17,10 +17,12 @@ jest.setTimeout(80000)
 
 //Opens the Hyundai USA home page will be executed before all test
 beforeAll(async () => {
-    await driver.get('https://www.hyundaiusa.com/us/en')
 
 //Opens browser window in maximize mode
     await driver.manage().window().maximize()
+
+//Driver (using .get) will navigate to a website.
+    await driver.get('https://www.hyundaiusa.com/us/en')
 
 //Accepts and closes the cookies policy by clicking on the Accept & Close in the footer of the home page
     await driver.findElement(By.xpath('/html/body/div[1]/div/button')).click()

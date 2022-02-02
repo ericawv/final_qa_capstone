@@ -18,11 +18,11 @@ jest.setTimeout(80000)
 //This test ensures that the user lands on te Vehicle page when the Vehicle is slected from the home page
 test('Vehicle Link Test', async () => {
 
+//Opens browser window in maximize mode
+await driver.manage().window().maximize()    
+
 //Opens the Hyundai USA website
     await driver.get('https://www.hyundaiusa.com/us/en') 
-
-//Opens browser window in maximize mode
-    await driver.manage().window().maximize()    
 
 //Accepts the cookies policy
     await driver.findElement(By.xpath('/html/body/div[1]/div/button')).click()

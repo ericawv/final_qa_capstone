@@ -22,12 +22,12 @@ jest.setTimeout(80000)
 
 
 beforeEach(async () => {
-    await navigate.navigationBar()
-
-    // await navigate.manage().window().maximize()
-
-// //Opens browser window in maximize mode
+    
+    //Opens browser window in maximize mode
     await driver.manage().window().maximize() 
+
+    //References the Navigation Bar method to open each test from the homepage
+    await navigate.navigationBar()
 
 })
 
@@ -77,34 +77,34 @@ test('Navigate Hotels', async () => {
 })
 
 // Accessess the Annual Passes page with async to use await, by locating the Parks Tickets link and click on the link. 
-test('Navigate Annual Passes', async () => {
+// test('Navigate Annual Passes', async () => {
     
-    await navigate.getAnnual('Annual Passes')
+//     await navigate.getAnnual('Annual Passes')
 
-    await navigate.clickAnnual('Annual Passes')
+//     await navigate.clickAnnual('Annual Passes')
 
-    await driver.sleep(5000)
-})
+//     await driver.sleep(5000)
+// })
 
 // Accessess the Vacation Packages page with async to use await, by locating the Parks Tickets link and click on the link. 
-test('Navigate Vacation Packages', async () => {
+// test('Navigate Vacation Packages', async () => {
     
-    await navigate.getPackages('Vacation Packages')
+//     await navigate.getPackages('Vacation Packages')
 
-    await navigate.clickPackages('Vacation Packages')
+//     await navigate.clickPackages('Vacation Packages')
 
-    await driver.sleep(5000)
-})
+//     await driver.sleep(5000)
+// })
 
 // Accessess the Safety Guidelines page with async to use await, by locating the Parks Tickets link and click on the link. 
-test('Navigate Safety Guidelines', async () => {
+// test('Navigate Safety Guidelines', async () => {
     
-    await navigate.getSafety('Safety Guidelines')
+//     await navigate.getSafety('Safety Guidelines')
 
-    await navigate.clickSafety('Safety Guidelines')
+//     await navigate.clickSafety('Safety Guidelines')
 
-    await driver.sleep(5000)
-})
+//     await driver.sleep(5000)
+// })
 
 
 
