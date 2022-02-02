@@ -13,7 +13,7 @@ const chromedriver = require('chromedriver')
 const driver = new Builder().withCapabilities(Capabilities.chrome()).build()
 
 //Sets the default timeout interval for each test
-jest.setTimeout(80000)
+jest.setTimeout(30000)
 
 //Opens the Hyundai USA home page will be executed before all test
 beforeAll(async () => {
@@ -26,6 +26,8 @@ beforeAll(async () => {
 
 //Accepts and closes the cookies policy by clicking on the Accept & Close in the footer of the home page
     await driver.findElement(By.xpath('/html/body/div[1]/div/button')).click()
+
+    await driver.sleep(5000)
 })
 
 // Closes the test window after all of the test have ran 
@@ -65,5 +67,7 @@ test('Function Testing', async () => {
     await location.click()
 
     await checkLocation('Dealer:', '(313) 880-1110', '1847 S. Telegraph Road')
+
+    await driver.sleep(5000)
 })
 
