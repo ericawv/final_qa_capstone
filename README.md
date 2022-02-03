@@ -7,20 +7,22 @@
 </p>
 
 
-Hi! Thank you for visiting the demonstraion of my Bright Paths QA Specializations Capstone Project. This project hightlights the manual and automated testing techniques and process for testing both the Hyundai USA and Universal Orlando Resort USA websites. 
+Hi! Thank you for visiting the demonstration of my Bright Paths QA Specializations Capstone Project. This project hightlights the manual and automated testing techniques and process for testing both the Hyundai USA and Universal Orlando Resort USA websites. In addition to testing the Hyundai USA and Universal Orlando Resort USA websites, API testing was also executed against the Marvel, Trello, and Universal Orlando Resort websites. 
+
+This repository contains all documentation (Test Plans, Test Cases, Test Reports, and Test Results) for all executed test. 
 > 
 
 ### 🏠 [Test Website For Hyundai USA](https://www.hyundaiusa.com/us/en)
-### 🏠 [Test Website For Universal Orlando Resort](https://www.universalorlando.com/web/en/us)
 
-
-## Hyundai USA Test Plan, Test Cases, and Reports
+## Trello Board for Hyundai USA (Test Plan, Test Cases, and Test Reports)
 
 ```sh
 https://trello.com/b/ovLKqAcc/hyundai-test-plan-capstone
 ```
 
-## Universal Orlando Report Test Plan, Test Cases, and Reports
+### 🏠 [Test Website For Universal Orlando Resort](https://www.universalorlando.com/web/en/us)
+
+## Trello Board for Universal Orlando Report (Test Plan, Test Cases, and Reports)
 
 ```sh
 https://trello.com/b/wnP1VJm2/universal-orlando-test-plan-capstone
