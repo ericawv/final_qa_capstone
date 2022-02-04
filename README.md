@@ -17,7 +17,7 @@ This repository contains all documentation (Test Plans, Test Cases, Test Reports
 ## Trello Board for Hyundai USA (Test Plan, Test Cases, and Test Reports)
 
 ```sh
-https://trello.com/b/ovLKqAcc/hyundai-test-plan-capstone
+* Trello: https://trello.com/b/ovLKqAcc/hyundai-test-plan-capstone
 ```
 
 ### 🏠 [Test Website For Universal Orlando Resort](https://www.universalorlando.com/web/en/us)
@@ -25,10 +25,13 @@ https://trello.com/b/ovLKqAcc/hyundai-test-plan-capstone
 ## Trello Board for Universal Orlando Report (Test Plan, Test Cases, and Reports)
 
 ```sh
-https://trello.com/b/wnP1VJm2/universal-orlando-test-plan-capstone
+* Trello: https://trello.com/b/wnP1VJm2/universal-orlando-test-plan-capstone
 ```
 
-## Screenshots
+## Demo Link
+```sh
+* Vimeo: https://vimeo.com/673380395
+````
 
 ## Author
 
